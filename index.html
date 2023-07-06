@@ -1,209 +1,199 @@
-header {
-	font-family: 'Imprima';
-	font-weight: 500px;
-	font-size: x-large;
-	text-align: left;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imprima">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <header>
+    Kristine Ling's Website
+  </header> -->
+  <nav class="navbar">
+    <!-- LOGO -->
+    
+    <div class="logo">
+       Kristine Ling </div>
+    
 
-.li {
-	font-family: 'Imprima', sans-serif;
-}
+    <!-- nav menu -->
+    <ul class="nav-links">
 
-/* utlity */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+      <!-- checkbox for hamburger -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-body {
-	font-family: 'Imprima';
-	font-size: large;
-	background-color: white;
-}
+      <!-- nav menu -->
+      <div class="menu">
 
-a {
-	text-decoration: none;
-}
+        <li><a id="home" href="/">Home</a></li>
+        <li><a href="/">About</a></li>
 
-li {
-	list-style: none;
-}
+        <li class="services">
+          <a href="/">Services</a>
 
-/* navbar */
-.navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #043b3d;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-	color: white;
-}
+          <!-- dropdown menu -->
+          <ul class="dropdown">
+            <li><a href="#CC">Content Creation </a></li>
+            <li><a href="#D">Designs</a></li>
+            <li><a href="#WM">Website Marketing</a></li>
+            <li><a href="#SMM">Social Media Marketing</a></li>
+            <li><a href="#CM">Community Marketing</a></li>
+            <li><a href="EM">Email Marketing</a></li>
+            <li><a href="TM">Traditional Marketing</a></li>
+          </ul>
 
-.nav-links a {
-	color: white;
-}
-.nav-links a:hover {
-	color: #f64616;
-	stroke-width: 3px;
-}
-/* logo lor */
-.logo {
-	font-family: 'Imprima', sans-serif;
-	font-size: 30px;
+        </li>
 
-	margin-top: 1%;
-	margin-left: 1%;
-	stroke-width: 3px;
-	-webkit-text-stroke: 1px #f64616;
-	-webkit-text-fill-color: #f64616;
-}
+        <li><a href="/">Pricing</a></li>
+        <li><a href="/">Contact</a></li>
+        <li>    
+        <!-- <form>
+            <input type="username" value="Enter email here" />
+            <br />
+            <input type="password" value=Password /> 
+        </form> -->
+      </li>
+      <li class="leads">
+        <li><a href="/">Sign in </a></li>
+        <li><a href="/">Sign up here</a></li>
+      </li>
+       <input id="srchbar" type="search" placeholder="Search">
 
-/* navbar menu */
-.menu {
-	display: flex;
-	gap: 1em;
-	font-size: 20px;
-	margin-top: 2%;
-}
+      </div>
+    </ul>
+ 
+    
+  </nav>
 
-.menu li:hover {
-	border-radius: 5px;
-	transition: 0.5s ease;
-}
+  <nav class="navbar">
+<p style="margin-left: 1%; font-size: 14px; padding-bottom: 10px; color: lightgray;"> Content | Marketing Strategist | SEO 
+  </p> 
+    <!-- navigation menuz -->
+    <ul class="nav-links">
+      <!-- trying out hamburger menu!!-->
 
-.menu li {
-	padding: 5px 14px;
-}
+    
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-/* dropdown menu- under services */
-.services {
-	position: relative;
-}
+      <!-- navigation menuz -->
+      <!-- <div class="menu">...</div> -->
+    </ul>
+  </nav>
+ 
 
-.dropdown {
-	background-color: #043b3d;
-	padding: 1em 0;
-	position: absolute; /* w resp. to parent*/
-	display: none;
-	border-radius: 8px;
-	top: 35px;
-}
 
-.dropdown li + li {
-	margin-top: 10px;
-}
+<!-- <div class="container">
+<div class="row">
+  <div class="column">
+  <div class="row">
+    <div class="container-img"> -->
+<div class="start-img">
+<img src="profile pic.png" alt="Kristine's profile picture" >
+    <h2> Elevating your company by creating 
+      <br> curated, effortless (for you) strategies to boost your profits
+    </h2>
+</div>
+ <div class="image-with-text">
+  <img src="landing pg 1.png" alt="..." width="25%" />
+   <div class="text-container">
+<p>some random shiz about me </p>
+</div>
+</div>
 
-.dropdown li {
-	padding: 0.5em 1em;
-	width: 8em;
-	text-align: center;
-	text-align: left;
-}
+ <div class="image-with-text">
+<img src="landing pg 2.png" alt="..." width="25%" />
+<div class="text-container">
+<p>wtf am I doing in 2023 pls tell me <br> cos I DONT KNOW <br> ...help </p>
+</div>
+</div>
 
-.dropdown li:hover {
-	color: orangered;
-}
+<div class="image-with-text">
+<img src="landing pg 3.png" alt="..." width="25%" />
+<div class="text-container">
+<p>taps fingers <br> I guess we'll find out together 😜 </p>
+</div>
+</div>
 
-.services:hover .dropdown {
-	display: block;
-}
+ <br>  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
-/* responsive navbar menu abit extra btw */
 
-/* checkbox */
 
-input[type='checkbox'] {
-	display: none;
-}
+<!-- </div>
+    <div>
+    <h2 style="display:inline-block;"> Spearheading your marketing strategies, <br> curated for you and your company</h2>
+    <style> 
+    h2 {margin: 5%};
+    </style>
 
-/* hamburger!! */
-.hamburger {
-	display: none;
-	font-size: 24px;
-	user-select: none;
-}
+<p style="display:inline-block; margin:5%; margin-left: 15%;">
+<img src="profile pic.png" alt="Kristine's profile picture">
+</p> -->
 
-/* media queries */
-@media (max-width: 768px) {
-	.menu {
-		display: none;
-		position: absolute;
-		background-color: black;
-		right: 0;
-		left: 0;
-		text-align: center;
-		padding: 16px 0;
-	}
 
-	.menu li:hover {
-		display: inline-block;
-		background-color: red;
-		transition: 0.3s ease;
-	}
+    
 
-	.menu li:active {
-		border-bottom: 3px solid red;
-	}
-	.menu li + li {
-		margin-top: 12px;
-	}
+<div class="Scope">
+<h1> What I've Done</h1>
 
-	input[type='checkbox']:checked ~ .menu {
-		display: block;
-	}
+<h2 id="CC"> 1. Content Creation </h2>
+<p> 🛞SEO Writing <br>
+✒️Copywriting <br>
+🤖E2E Content Creation in LinkedIn, Facebook, Instagram, and Tiktok <br>
+ </p> <br>
 
-	.hamburger {
-		display: block;
-	}
+<h2 id="WM"> Website Marketing </h2>
+<p>Everything from landing pages to entire website overhaul. <br>
+Focusing on technology, F&B, medical, and various other niches, <br>
+I primarily focus on direct response, using video marketing to skyrocket conversion rates. <br>
+</p> <br>
 
-	.dropdown {
-		left: 50%;
-		top: 30px;
-		transform: translateX(35%);
-	}
+<h2 id="D"> Designs </h2>
+<p>💻UI/UX for Applications & Websites <br>
+Ⓜ️Logos <br>
+🕸️Hero sections <br>
+🖼️Content <br>
+</p> <br>
 
-	.dropdown li:hover {
-		background-color: #acacac;
-	}
-}
+<h2 id="SMM"> Social Media Marketing </h2>
+<p>💰Performance Marketing <br>
+💃🏻Influencer Marketing <br>
+🌋Content Velocity <br>
+</p> <br>
 
-.start-img {
-	padding: 2%;
-	justify-content: center;
-	text-align: center;
-}
+<h2 id="CM"> Community Marketing </h2>
+<p>BYOB- build your own brand, and focus on community outreach that you can leverage as you build your company. <br>
+100 other people will offer the same service, so build trust with your customers. Loyalty. A relationship. 
+</p> <br>
 
-.image-with-text {
-	clear: both;
-}
-.image-with-text img {
-	float: left;
-	margin-bottom: 3%;
-	margin-left: 2%;
-	margin-right: 2%;
-	border-radius: 50px;
-	box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
-}
+<h2 id="EM"> Email Marketing </h2>
+<p> Everything from get-to-know-me emails, newsletters to cart abandonment campaigns, let’s get your sequence set up. 
+ </p><br>
 
-.image-with-text .text-container {
-	margin-left: 1%;
-	display: inline-flex;
-	align-items: center;
-	gap: 86px;
-}
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
+<h2 id="TM"> Traditional Marketing </h2>
+<p> 🎴Stickers <br>
+📃Flyers <br>
+☕Merchandise <br>
+It's not just for old people -_- </p> <br>
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-	padding-top: 60px;
-}
+</div>
 
+<a href="#home">Home</a>
+
+<br> <br>
+
+<h1> Work Experience <br> (FULLTIME) </h1> <br>
+
+
+
+<h1> Work Experience <br> (PARTTIME/FREELANCE/CONTRACT)</h1> <br>
+  </body>
+  <footer>
+  </footer>
+  <script src="scripts.js"></script>
+</html>
