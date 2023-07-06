@@ -1,107 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Document</title>
-</head>
-<body>
-  <!-- <header>
-    Kristine Ling's Website
-  </header> -->
-  <nav class="navbar">
-    <!-- LOGO -->
-    <div class="logo">Kristine Ling</div>
-    
+header {
+	font-family: 'Imprima';
+	font-weight: 500px;
+	font-size: x-large;
+	text-align: left;
+}
 
-    <!-- nav menu -->
-    <ul class="nav-links">
+.li {
+	font-family: 'Imprima', sans-serif;
+}
 
-      <!-- checkbox for hamburger -->
-      <input type="checkbox" id="checkbox_toggle" />
-      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+/* utlity */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-      <!-- nav menu -->
-      <div class="menu">
-        
+body {
+	font-family: 'Imprima';
+	font-size: large;
+	background-color: white;
+}
 
-        <li><a href="/">Home</a></li>
-        <li><a href="/">About</a></li>
+a {
+	text-decoration: none;
+}
 
-        <li class="services">
-          <a href="/">Services</a>
+li {
+	list-style: none;
+}
 
-          <!-- dropdown menu -->
-          <ul class="dropdown">
-            <li><a href="/">Content Strategy </a></li>
-            <li><a href="/">Social Media Marketing</a></li>
-            <li><a href="/">Community Marketing</a></li>
-            <li><a href="/">Market Research</a></li>
-            <li><a href="/">Marketing Consultation</a></li>
-          </ul>
+/* navbar */
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #043b3d;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	color: white;
+}
 
-        </li>
+.nav-links a {
+	color: white;
+}
+.nav-links a:hover {
+	color: #f64616;
+	stroke-width: 3px;
+}
+/* logo lor */
+.logo {
+	font-family: 'Imprima', sans-serif;
+	font-size: 30px;
 
-        <li><a href="/">Pricing</a></li>
-        <li><a href="/">Contact</a></li>
-        <li>    
-        <form>
-            <input type="username" value="Enter email here" />
-            <br />
-            <!-- <input type="password" value=Password /> -->
-        </form>
-      </li>
-      </div>
-    </ul>
-  </nav>
+	margin-top: 1%;
+	margin-left: 1%;
+	stroke-width: 3px;
+	-webkit-text-stroke: 1px #f64616;
+	-webkit-text-fill-color: #f64616;
+}
 
-  <nav class="navbar">
+/* navbar menu */
+.menu {
+	display: flex;
+	gap: 1em;
+	font-size: 20px;
+	margin-top: 2%;
+}
 
-    <!-- navigation menuz -->
-    <ul class="nav-links">
-      <!-- trying out hamburger menu!!-->
-      <input type="checkbox" id="checkbox_toggle" />
-      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+.menu li:hover {
+	border-radius: 5px;
+	transition: 0.5s ease;
+}
 
-      <!-- navigation menuz -->
-      <!-- <div class="menu">...</div> -->
-    </ul>
-  </nav>
-  <main>
+.menu li {
+	padding: 5px 14px;
+}
 
+/* dropdown menu- under services */
+.services {
+	position: relative;
+}
 
-  </main>
-  <body>
+.dropdown {
+	background-color: #043b3d;
+	padding: 1em 0;
+	position: absolute; /* w resp. to parent*/
+	display: none;
+	border-radius: 8px;
+	top: 35px;
+}
 
-<div class="row">
-  <div class="column">
-   <h2 style=" margin:18%;"> Spearheading your marketing strategies, <br> curated for you and your company</h2>
-  </div>
-  <div class="column">
-    <img src="profile pic.png" alt="Kristine's profile picture">
-    <style>
-      img {margin-top: 10%;}
-    </style>
-  </div>
+.dropdown li + li {
+	margin-top: 10px;
+}
 
+.dropdown li {
+	padding: 0.5em 1em;
+	width: 8em;
+	text-align: center;
+	text-align: left;
+}
 
-<!-- </div>
-    <div>
-    <h2 style="display:inline-block;"> Spearheading your marketing strategies, <br> curated for you and your company</h2>
-    <style> 
-    h2 {margin: 5%};
-    </style>
+.dropdown li:hover {
+	color: orangered;
+}
 
-<p style="display:inline-block; margin:5%; margin-left: 15%;">
-<img src="profile pic.png" alt="Kristine's profile picture">
-</p> -->
+.services:hover .dropdown {
+	display: block;
+}
 
+/* responsive navbar menu abit extra btw */
 
-    </div>
-  </body>
-  <footer>
-  </footer>
-  <script src="scripts.js"></script>
-</html>
+/* checkbox */
+
+input[type='checkbox'] {
+	display: none;
+}
+
+/* hamburger!! */
+.hamburger {
+	display: none;
+	font-size: 24px;
+	user-select: none;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+	.menu {
+		display: none;
+		position: absolute;
+		background-color: black;
+		right: 0;
+		left: 0;
+		text-align: center;
+		padding: 16px 0;
+	}
+
+	.menu li:hover {
+		display: inline-block;
+		background-color: red;
+		transition: 0.3s ease;
+	}
+
+	.menu li:active {
+		border-bottom: 3px solid red;
+	}
+	.menu li + li {
+		margin-top: 12px;
+	}
+
+	input[type='checkbox']:checked ~ .menu {
+		display: block;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.dropdown {
+		left: 50%;
+		top: 30px;
+		transform: translateX(35%);
+	}
+
+	.dropdown li:hover {
+		background-color: #acacac;
+	}
+}
+
+.start-img {
+	padding: 2%;
+	justify-content: center;
+	text-align: center;
+}
+
+.image-with-text {
+	clear: both;
+}
+.image-with-text img {
+	float: left;
+	margin-bottom: 3%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border-radius: 50px;
+	box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.image-with-text .text-container {
+	margin-left: 1%;
+	display: inline-flex;
+	align-items: center;
+	gap: 86px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+}
+
